@@ -88,6 +88,102 @@ mergedcolumnnames_array = ["timestamp", "order", "open_x", "high_x", "low_x", "c
 new_df = pd.DataFrame(columns=["timestamp", "open", "high", "low", "close", "volume", "vwap", "increase"]);
 ```
 
+## Read dataset from .csv format file
+
+```
+def read_folder( directory_path ):
+    ### define variable
+    listof_directory = [];
+
+    ### for each file in directory
+    for _obj in os.listdir(target_path) :
+        listof_directory.append(_obj);
+    
+    ### return list of directories
+    return listof_directory;
+    
+def read_csv( file_name ):
+    _filename = os.path.join( target_path , file_name );
+    df = pd.read_csv( _filename );
+    
+    # return dataset
+    return df;
+
+def compare_openhigh_value( row ):
+    if float(row["open"]) < float(row["high"]):
+        val = 1;
+    elif float(row["open"]) > float(row["high"]):
+        val = 0;
+    else:
+        val = 0;
+    return val
+    
+def convert_timestamp_value( row ):
+    global previous_datetimestamp; 
+    global time_interval;
+    global min_datetimestamp;
+    global max_datetimestamp;
+    
+    # aside to create new timestamp dataset
+    if min_datetimestamp == None :
+        min_datetimestamp = str(row["timestamp"]);
+    elif datetime.fromisoformat(min_datetimestamp) > datetime.fromisoformat(str(row["timestamp"])) :
+        min_datetimestamp = str(row["timestamp"]);
+        
+    if max_datetimestamp == None :
+        max_datetimestamp = str(row["timestamp"]);
+    elif datetime.fromisoformat(max_datetimestamp) < datetime.fromisoformat(str(row["timestamp"])) :
+        max_datetimestamp = str(row["timestamp"]);
+
+    return datetime.fromisoformat( str(row["timestamp"]) ).timestamp();
+    
+def read_dataset_fromfolder( _target_path ):
+    # variable
+    global new_df;
+
+    # read dataset from folder
+    _listof_directory = read_folder( _target_path );
+    
+    # list file object in folder
+    for _obj in _listof_directory :
+        ### read and display file name
+        print( os.linesep );
+        print( _obj )
+        _df = read_csv( _obj );
+        _df = pd.DataFrame( _df );
+        
+        _df["timestamp"] = _df["timestamp"].astype(str);
+        
+        print(_df.head())
+        
+        _df["timestamp"] = pd.to_datetime( _df["timestamp"] );              
+        
+        ### cleaning dataset
+        _df['increase'] = _df.apply(compare_openhigh_value, axis=1);
+        
+        ### data types
+        _df["timestamp"] = _df.apply(convert_timestamp_value, axis=1) / 1000000;        
+        _df['open'] = _df['open'].astype(np.float32);
+        _df['high'] = _df['high'].astype(np.float32);
+        _df['low'] = _df['low'].astype(np.float32);
+        _df['close'] = _df['close'].astype(np.float32);
+        _df['volume'] = _df['volume'].astype(np.float32) / 100;
+        _df['vwap'] = _df['vwap'].astype(np.float32);
+        _df['increase'] = _df['increase'].astype(np.float32);
+
+        print( _df.head(10) )        
+        
+        # concatenate for new dataset
+        new_df = pd.concat([new_df, _df], axis=0, ignore_index=True);
+
+    return new_df;
+
+def compare_twocolumns_open_nonan( row ):
+    if row["open_x"] == np.nan or row["open_x"] == 0 or str(row["open_x"]).upper() == "nan".upper() :
+        return row["open_y"];
+        
+    return row["open_x"];
+```
 
 
 
