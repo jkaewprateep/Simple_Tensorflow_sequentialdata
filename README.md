@@ -184,8 +184,44 @@ def compare_twocolumns_open_nonan( row ):
         
     return row["open_x"];
 ```
+## Option - fill time interval from export data for create periods accumulation
+```
+def fill_timebetweeninterval( _obj ):
+
+    new_datetime = datetime.fromisoformat( _obj ) + timedelta(seconds=time_interval);
+    new_datetime = datetime(new_datetime.year, new_datetime.month, new_datetime.day, new_datetime.hour,
+                        new_datetime.minute, new_datetime.second, tzinfo=timezone).isoformat();
+    new_datetime = new_datetime.replace("T", " ");
+
+    return new_datetime;
 
 
+def fill_datarecordby_interval( _min_datetimestamp, _max_datetimestamp ):
+    global time_interval;
+    global timezone;
+    global new_datetimestamp_array;
+    
+    target_number = datetime.fromisoformat( _max_datetimestamp ) - datetime.fromisoformat( _min_datetimestamp );
+    target_number = target_number.seconds;
+
+    # create new interval seconds array
+    start = 0;
+    stop = target_number + time_interval;
+    step = time_interval;
+    new_arrayseconds = np.arange(start, stop, step);
+    
+    # create new array of datetimestamp from interval
+    new_arraytimeinterval = [];
+
+    for item in new_arrayseconds :
+        new_datetime = datetime.fromisoformat( _min_datetimestamp ) + timedelta(seconds=int(item));
+        new_datetime = datetime(new_datetime.year, new_datetime.month, new_datetime.day, new_datetime.hour,
+                        new_datetime.minute, new_datetime.second, tzinfo=timezone).isoformat();
+        new_datetime = new_datetime.replace("T", " ");
+        new_arraytimeinterval.append(new_datetime);
+
+    return new_arraytimeinterval;
+```
 
 
 
