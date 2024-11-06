@@ -216,7 +216,10 @@ def compare_twocolumns_open_nonan( row ):
         
     return row["open_x"];
 ```
-## Option - fill time interval from export data for create periods accumulation
+## Option - fill time interval from export data for create periods of accumulation
+
+🧸💬 One issue of exported data is the time interval do not fixed and the model may need to learn from the average, mean, last selected, min or max values of timescales converted. </br> 
+
 ```
 def fill_timebetweeninterval( _obj ):
 
@@ -256,6 +259,8 @@ def fill_datarecordby_interval( _min_datetimestamp, _max_datetimestamp ):
 ```
 
 ## Create dataset
+
+🧸💬 By selecting ratios of input categorizes label data records and dataset creation can be performed easily by recalling the function. <br>
 
 ```
 def selectby_thereshold( dataset, _thereshold, _numlimit=None ) :
