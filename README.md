@@ -10,6 +10,14 @@ Simple Tensorflow for sequential data learning and prediction
 </br>
 </br>
 
+## Predictions
+<p align="center" width="100%">
+    <img width="80%" src="https://github.com/jkaewprateep/Simple_Tensorflow_sequentialdata/blob/main/prediction.png"> </br>
+    <b> Predictions </b> </br>
+</p>
+</br>
+</br>
+
 ## Libraries import
 
 ```
@@ -72,7 +80,8 @@ time_begin = None;
 timezone = timezone(timedelta(hours=-4));
 stop_reason = 0;
 
-mergedcolumnnames_array = ["timestamp", "order", "open_x", "high_x", "low_x", "close_x", "volume_x", "vwap_x", "open_y", "high_y", "low_y", "close_y", "volume_y", "vwap_y", "increase"];
+mergedcolumnnames_array = ["timestamp", "order", "open_x", "high_x", "low_x", "close_x", "volume_x", "vwap_x", "open_y",
+    "high_y", "low_y", "close_y", "volume_y", "vwap_y", "increase"];
 
 # add new column #increase for labels input.
 new_df = pd.DataFrame(columns=["timestamp", "open", "high", "low", "close", "volume", "vwap", "increase"]);
