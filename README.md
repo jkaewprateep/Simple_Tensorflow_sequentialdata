@@ -19,11 +19,21 @@ Simple Tensorflow for sequential data learning and prediction
 ## Predictions
 <p align="center" width="100%">
     <img width="99%" src="https://github.com/jkaewprateep/Simple_Tensorflow_sequentialdata/blob/main/prediction_01.png"> </br>
+    <b> Predictions </b> </br>
+</p>
+</br>
+</br>
+
+🐑💬 ➰ The reason to input random in the training process for AI auto-pilot, not the random for signals generator because we need the model to learn all possible values but it is a binary classification they should learn on all states possible quickly. </br>
+
+<p align="center" width="100%">
     <img width="80%" src="https://github.com/jkaewprateep/Simple_Tensorflow_sequentialdata/blob/main/prediction_02.png"> </br>
     <b> Predictions </b> </br>
 </p>
 </br>
 </br>
+
+
 
 ## Libraries import
 
