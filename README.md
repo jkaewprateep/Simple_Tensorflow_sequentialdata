@@ -41,7 +41,7 @@ Simple Tensorflow for sequential data learning and prediction
 
 🐑💬 ➰ Should it be dt(2) time domain ⁉️ </br>
 
-🐐💬 It is supposed that acceleration function response is a natural function and we can convert it into time-scales domain plotting, the same as playing Mario games and sliding before dropping in front of the green turtle. </br>
+🐐💬 It is supposed that acceleration function response is a natural function and we can convert it into time-scales domain plotting, the same as playing Mario games and sliding before dropping in front of the green turtle. 〰️🍄🧍🐢❗ </br>
 
 ## Libraries import
 
