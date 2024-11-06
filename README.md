@@ -10,7 +10,9 @@ Simple Tensorflow for sequential data learning and prediction
 </br>
 </br>
 
-🧸💬🍕 Basics TensorFlow machine learning model works with datasets, and data extraction and creates suitable data format for machine learning, evaluation, and improvement. There are several dataset management, arrays, and libraries we are using Pandas for datasets from .csv import and also statistics, correlations, and variable selection process information inputs, Numpy or TensorFlow you can change the default of float variable typoes of TensorFlow from 32 to 64 bits by the configuration settings file for more precise inputs. </br>
+🧸💬🍕 Basics TensorFlow machine learning model works with datasets, and data extraction and creates suitable data format for machine learning, evaluation, and improvement. There are several dataset management, arrays, and libraries we are using Pandas for datasets from .csv import and also statistics, correlations, and variable selection process information inputs, Numpy or TensorFlow you can change the default of float variable types of TensorFlow from 32 to 64 bits by the configuration settings file for more precise inputs. </br>
+
+🦤💬 The results do not always depend on precision values or degrees but some environment variables had a small amount number of values precisions information, using data extraction function to create logarithms linear results can reduce tasks when working with small precisions number, and more number of digits does not prove understanding but it is good to store some information and their conditions. In validation need to prove with raws data for accuracy number can perform on the same dataset. </br>
 
 ## Predictions
 <p align="center" width="100%">
