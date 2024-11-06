@@ -120,6 +120,8 @@ new_df = pd.DataFrame(columns=["timestamp", "open", "high", "low", "close", "vol
 
 ## Read dataset from .csv format file
 
+🧸💬 Simple method to load data into a dataset and create a suitable format for learning the model and data record response feedback. </br> 
+
 ```
 def read_folder( directory_path ):
     ### define variable
