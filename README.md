@@ -12,7 +12,8 @@ Simple Tensorflow for sequential data learning and prediction
 
 ## Predictions
 <p align="center" width="100%">
-    <img width="80%" src="https://github.com/jkaewprateep/Simple_Tensorflow_sequentialdata/blob/main/prediction.png"> </br>
+    <img width="99%" src="https://github.com/jkaewprateep/Simple_Tensorflow_sequentialdata/blob/main/prediction_01.png"> </br>
+    <img width="80%" src="https://github.com/jkaewprateep/Simple_Tensorflow_sequentialdata/blob/main/prediction_02.png"> </br>
     <b> Predictions </b> </br>
 </p>
 </br>
