@@ -73,6 +73,8 @@ print("TF version: ", tf.__version__);
 
 ## Variables
 
+🧸💬 Stored variables, settings, and expected values are collected into a single place for easy adjusting and performance. </br>
+
 ```
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 Variables
