@@ -223,7 +223,68 @@ def fill_datarecordby_interval( _min_datetimestamp, _max_datetimestamp ):
     return new_arraytimeinterval;
 ```
 
+## Create dataset
 
+```
+def selectby_thereshold( dataset, _thereshold, _numlimit=None ) :
+
+    if fill_option == 1 :
+        dataset = dataset.fillna(method='ffill');
+    else :
+        # drop NA values records
+        dataset = dataset.dropna(subset=["open", "high", "low", "close", "volume", "vwap"]);
+
+    negativetarget_df = dataset[dataset["increase"]== 0];
+    positivetarget_df = dataset[dataset["increase"]== 1];
+
+    num_negative = len(negativetarget_df);
+    num_positive = len(positivetarget_df);
+    num_total = num_negative + num_positive;
+    
+    # set up number of target records
+    if _numlimit == None:
+        num_expecting = int(_thereshold * num_total);
+    else :
+        num_expecting = _numlimit;
+    
+    if num_expecting > num_positive :
+        num_expecting = num_positive;
+        num_negative = int((1 - _thereshold) * num_total);
+    else :
+        num_positive = int(_thereshold * num_expecting);
+        num_negative = int(num_expecting - num_positive);
+
+    print( os.linesep );
+    print( "num_negative: ", num_negative );
+    print( "num_positive: ", num_positive );
+    print( "num_total: ", num_total );
+    
+    # shuffle records
+    new_df = pd.concat([positivetarget_df[:num_positive], negativetarget_df[:num_negative]]);
+    dataset = dataset.sample(frac=1, random_state=42, replace=True, ignore_index=True);
+
+    return new_df;
+    
+def create_dataset( _pandas_dataset, _select_recordthereshold, _select_recordlimit ) :
+
+    _pandas_dataset = selectby_thereshold( _pandas_dataset, _select_recordthereshold, _select_recordlimit );
+
+    # reshape
+    merged_recordscount = _pandas_dataset["timestamp"].count();
+    print( os.linesep );
+    print( "merged records: ", merged_recordscount );
+
+    labels = tf.reshape(_pandas_dataset["increase"], [merged_recordscount, 1]);
+    # convert data type to int
+    labels = tf.cast(labels, dtype=tf.int32 );
+
+    _pandas_dataset = tf.cast( _pandas_dataset[mergedcolumnnames_array].astype(np.float32), dtype=tf.float32 );
+    _pandas_dataset = tf.reshape( _pandas_dataset, [merged_recordscount, 1, len(mergedcolumnnames_array)] );
+
+    dataset = tf.data.Dataset.from_tensor_slices(( _pandas_dataset, labels ));
+    
+    return dataset;
+```
 
 
 
