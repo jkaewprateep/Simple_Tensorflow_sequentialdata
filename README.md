@@ -2,13 +2,15 @@
 Simple Tensorflow for sequential data learning and prediction
 
 <p align="center" width="100%">
-    <img width="60%" src="https://github.com/jkaewprateep/Simple_Tensorflow_sequentialdata/blob/main/tensorflow_01.png">
+    <img width="60.3%" src="https://github.com/jkaewprateep/Simple_Tensorflow_sequentialdata/blob/main/tensorflow_01.png">
     <img width="12%" src="https://github.com/jkaewprateep/Simple_Tensorflow_sequentialdata/blob/main/kid_40.png">
-    <img width="24%" src="https://github.com/jkaewprateep/Simple_Tensorflow_sequentialdata/blob/main/kid_39.png"> </br>
+    <img width="24.05%" src="https://github.com/jkaewprateep/Simple_Tensorflow_sequentialdata/blob/main/kid_39.png"> </br>
     <b> Learning TensorFlow SDK and Python codes </b> </br>
 </p>
 </br>
 </br>
+
+🧸💬🍕 Basics TensorFlow machine learning model works with datasets, and data extraction and creates suitable data format for machine learning, evaluation, and improvement. There are several dataset management, arrays, and libraries we are using Pandas for datasets from .csv import and also statistics, correlations, and variable selection process information inputs, Numpy or TensorFlow you can change the default of float variable typoes of TensorFlow from 32 to 64 bits by the configuration settings file for more precise inputs. </br>
 
 ## Predictions
 <p align="center" width="100%">
