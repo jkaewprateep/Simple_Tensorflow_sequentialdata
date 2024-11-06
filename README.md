@@ -17,7 +17,7 @@ Simple Tensorflow for sequential data learning and prediction
 💃( 👩‍🏫 )💬 In the application we need functions that have a faster response than most correct because events as states are products from input sequences data and time execution gaps to create development, and in some solutions, they are scalable applications when ratios and support can apply on the different scales but can perform better with small amount of load to computation units. Possible to create random action between prediction actions during the learning process to fulfill the development action during training time or you can use this technique while you train your AI robot auto-pilot because this method allows machine learning to learn action states and distribution of input dataset because of in games simulation is small scopes repeats if you are performed on a single user player. [remote device application](https://github.com/jkaewprateep/Remote_devices/blob/main/README.md ) </br>
 
 ## Application development
-🧸💬 Free basic text editors with tools and support plugins. </br>
+🧸💬 Free basic text editors with tools and support plugins. [Notepad++]( https://notepad-plus-plus.org/ ) </br>
 
 <p align="center" width="100%">
     <img width="99%" src="https://github.com/jkaewprateep/Simple_Tensorflow_sequentialdata/blob/main/application_development.png"> </br>
