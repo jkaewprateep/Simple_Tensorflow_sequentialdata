@@ -43,9 +43,11 @@ Simple Tensorflow for sequential data learning and prediction
 
 🐐💬 It is supposed that acceleration function response is a natural function and we can convert it into time-scales domain plotting, the same as playing Mario games and sliding before dropping in front of the green turtle. 〰️🍄🧍🐢❗ </br>
 
-🧸💬 Faster and relative position will be considered when slower and lower priority will be later consideration, continuity of information is good for sensors experiment and games simulation but in application's real environment they may fly through installed window in a second 🐢🪽 </br>
+🧸💬 Faster and relative position will be considered when slower and lower priority will be later consideration, continuity of information is good for sensor experiments and games simulation but in the application's real environment they may fly through an installed window in a second 🐢🪽 </br>
 
 ## Libraries import
+
+🧸💬 Simple library import, system information, and response time unit are allowed to create a simple TensorFlow learning Python scripts for our experiment. </br>
 
 ```
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
